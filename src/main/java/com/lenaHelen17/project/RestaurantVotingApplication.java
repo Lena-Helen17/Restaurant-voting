@@ -21,9 +21,7 @@ public class RestaurantVotingApplication implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
-        userRepository.save(new User("user@gmail.com", "User_First", "UserName_First", "First_Password", Set.of(Role.ROLE_USER)));
-        userRepository.save(new User("admin@gmail.com", "Admin_First", "adminName_First", "Admin_Password", Set.of(Role.ROLE_USER, Role.ROLE_ADMIN)));
+    public void run(ApplicationArguments args) {
         System.out.println(userRepository.findAll());
     }
 }
