@@ -1,4 +1,4 @@
-NSERT INTO USERS (EMAIL, FIRST_NAME, LAST_NAME, PASSWORD)
+INSERT INTO USERS (EMAIL, FIRST_NAME, LAST_NAME, PASSWORD)
 VALUES ('user@gmail.com', 'User_First', 'User_Last', '{noop}password'),
        ('admin@javaops.ru', 'Admin_First', 'Admin_Last', '{noop}admin');
 
