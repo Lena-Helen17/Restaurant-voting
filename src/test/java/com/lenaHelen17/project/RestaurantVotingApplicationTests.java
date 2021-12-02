@@ -28,5 +28,4 @@ class RestaurantVotingApplicationTests {
     void findAllUsers() {
         System.out.println(userRepository.findAll());
     }
-
 }
