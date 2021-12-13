@@ -1,0 +1,40 @@
+
+    GET http://localhost:8080/api
+    GET http://localhost:8080/api/users
+    GET http://localhost:8080/api/users/1
+    GET http://localhost:8080/api/users/search
+    GET http://localhost:8080/api/users/search/by-email?email=User@gmail.com
+    GET http://localhost:8080/api/users/search/by-lastname?lastName=Admin
+    GET http://localhost:8080/api/users/search/by-lastname?lastName=last
+
+    POST http://localhost:8080/api/users
+    Content-Type: application/json
+
+    {
+     "email": "test@test.com",
+     "firstName": "Test",
+     "lastName": "Test",
+     "password": "test",
+     "roles": [ "ROLE_USER"]
+    }
+
+    ###
+    PATCH http://localhost:8080/api/users/1
+    Content-Type: application/json
+
+    {
+      "lastName": "User+Last"
+    }
+
+http://localhost:8080/h2-console
+# ImMemory
+    url: jdbc:h2:mem:voting
+    tcp: jdbc:h2:tcp://localhost:9092/mem:voting
+# Absolute path
+    url: jdbc:h2:C:/projects/bootjava/restorant-voting/db/voting
+    tcp: jdbc:h2:tcp://localhost:9092/C:/projects/bootjava/restorant-voting/db/voting
+# Relative path form current dir
+    url: jdbc:h2:./db/voting
+# Relative path from home
+    url: jdbc:h2:~/voting
+    tcp: jdbc:h2:tcp://localhost:9092/~/voting
