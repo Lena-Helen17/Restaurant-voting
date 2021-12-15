@@ -7,6 +7,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.Set;
 
 @Entity
@@ -16,7 +17,7 @@ import java.util.Set;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @ToString(callSuper = true, exclude = {"password"})
-public class User extends AbstractPersistable<Integer> {
+public class User extends BaseEntity implements Serializable {
 
     @Column(name = "email", nullable = false, unique = true)
     @Email
@@ -37,8 +38,8 @@ public class User extends AbstractPersistable<Integer> {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
-            //uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "role"}, name = "user_roles_unique")})
+    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"),
+            uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "role"}, name = "user_roles_unique")})
     @Column(name = "role")
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles;

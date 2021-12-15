@@ -1,5 +1,8 @@
 
-     GET http://localhost:8080/api/account
+    GET http://localhost:8080/login
+    GET http://localhost:8080/logout
+    GET http://localhost:8080/api/account
+    GET http://localhost:8080/api/users
 
     GET http://localhost:8080/api
     GET http://localhost:8080/api/users
