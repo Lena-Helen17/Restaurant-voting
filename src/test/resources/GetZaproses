@@ -1,4 +1,6 @@
 
+     GET http://localhost:8080/api/account
+
     GET http://localhost:8080/api
     GET http://localhost:8080/api/users
     GET http://localhost:8080/api/users/1
@@ -38,3 +40,4 @@ http://localhost:8080/h2-console
 # Relative path from home
     url: jdbc:h2:~/voting
     tcp: jdbc:h2:tcp://localhost:9092/~/voting
+
