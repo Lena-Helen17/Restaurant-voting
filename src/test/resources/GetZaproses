@@ -77,16 +77,3 @@ http://localhost:8080/h2-console
     GET http://localhost:8080/api/account
     Authorization: Basic test@test.com test
 
-//Для проверки ошибок
-
-PUT http://localhost:8080/api/account
-Content-Type: application/json
-Authorization: Basic user@gmail.com password
-
-{
-  "id": 7,
-  "email": "user@gmail.com",
-  "firstName": "New_First",
-  "lastName": "New_Last"
-}
-###

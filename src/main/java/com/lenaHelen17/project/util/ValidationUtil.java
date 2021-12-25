@@ -1,13 +1,11 @@
 package com.lenaHelen17.project.util;
 
-import com.lenaHelen17.project.util.exception.IllegalRequestDataException;
 import com.lenaHelen17.project.model.BaseEntity;
 
 public class ValidationUtil {
-
     public static void checkNew(BaseEntity entity) {
         if (!entity.isNew()) {
-            throw new IllegalRequestDataException(entity.getClass().getSimpleName() + " must be new (id=null)");
+            throw new IllegalArgumentException(entity + " must be new (id=null)");
         }
     }
 
@@ -16,7 +14,7 @@ public class ValidationUtil {
         if (entity.isNew()) {
             entity.setId(id);
         } else if (entity.id() != id) {
-            throw new IllegalRequestDataException(entity.getClass().getSimpleName() + " must has id=" + id);
+            throw new IllegalArgumentException(entity + " must has id=" + id);
         }
     }
 }
