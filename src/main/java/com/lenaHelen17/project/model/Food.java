@@ -24,7 +24,7 @@ public class Food extends BaseEntity implements Serializable {
     @JoinColumn(name = "restaurants_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @NotNull
-    private Restaurants restaurants;
+    private Restaurant restaurants;
 
     @Column(name = "food_name")
     @Size(max = 128)

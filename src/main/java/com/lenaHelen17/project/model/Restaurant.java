@@ -14,9 +14,18 @@ import java.io.Serializable;
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Restaurants extends BaseEntity implements Serializable {
+public class Restaurant extends BaseEntity implements Serializable {
 
     @Column(name = "name", nullable = false, unique = true)
     @Size(max = 128)
     private String name;
+
+
+    @Override
+    public String toString() {
+        return "Restaurants{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
