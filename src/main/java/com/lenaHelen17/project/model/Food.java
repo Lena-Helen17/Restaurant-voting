@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class Menu extends BaseEntity implements Serializable {
+public class Food extends BaseEntity implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "restaurants_id", nullable = false)
@@ -35,7 +35,7 @@ public class Menu extends BaseEntity implements Serializable {
     @NotNull
     private Double price;
 
-    @Column(name = "date", nullable = false)
+    @Column(name = "date_food", nullable = false)
     @NotNull
     @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
     private LocalDateTime dateTime;

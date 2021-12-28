@@ -14,7 +14,7 @@ VALUES ('Restaurant_First'),
        ('Restaurant_Fourth'),
        ('Restaurant_Fifth');
 
-INSERT INTO MENU (FOOD_NAME, PRICE, DATE, RESTAURANTS_ID)
+INSERT INTO MENU (FOOD_NAME, PRICE, DATE_FOOD, RESTAURANTS_ID)
 VALUES ('Food_First', '250.50', '2020-01-30', 1),
        ('Food_Second', '350.50', '2020-01-30', 1),
        ('Food_Third', '150.00', '2020-01-30', 1),
