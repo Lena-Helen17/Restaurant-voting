@@ -26,7 +26,7 @@ public class Voting extends BaseEntity{
     @OneToOne
     @JoinColumn(name = "restaurants_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    private Restaurants restaurants;
+    private Restaurant restaurants;
 
     @Column(name = "date_voting", nullable = false, columnDefinition = "timestamp default now()", updatable = false)
     @NotNull
