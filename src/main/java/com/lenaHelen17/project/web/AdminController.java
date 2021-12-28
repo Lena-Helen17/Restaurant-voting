@@ -1,7 +1,7 @@
 package com.lenaHelen17.project.web;
 
-import com.lenaHelen17.project.repository.MenuRepository;
 import com.lenaHelen17.project.repository.RestaurantRepository;
+import com.lenaHelen17.project.repository.UserRepository;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AdminController {
 
     private final RestaurantRepository restaurantRepository;
-    private final MenuRepository menuRepository;
+    private final UserRepository userRepository;
 
 
 }

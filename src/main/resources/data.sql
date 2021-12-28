@@ -7,31 +7,16 @@ VALUES ('USER', 1),
        ('ADMIN', 2),
        ('USER', 2);
 
-INSERT INTO RESTAURANTS (NAME)
-VALUES ('Restaurant_First'),
-       ('Restaurant_Second'),
-       ('Restaurant_Third'),
-       ('Restaurant_Fourth'),
-       ('Restaurant_Fifth');
-
-INSERT INTO MENU (FOOD_NAME, PRICE, DATE_FOOD, RESTAURANTS_ID)
-VALUES ('Food_First', '250.50', '2020-01-30', 1),
-       ('Food_Second', '350.50', '2020-01-30', 1),
-       ('Food_Third', '150.00', '2020-01-30', 1),
-       ('Food_First', '250.50', '2020-02-03', 4),
-       ('Food_Second', '350.50', '2020-02-03', 4),
-       ('Food_Third', '150.00', '2020-02-03', 4),
-       ('Food_First', '250.50', '2020-01-03', 2),
-       ('Food_Second', '350.50', '2020-01-30', 2),
-       ('Food_Third', '150.00', '2020-01-30', 2),
-       ('Food_First', '250.50', '2020-01-30', 3),
-       ('Food_Second', '350.50', '2020-01-30', 3),
-       ('Food_First', '250.50', '2020-01-30', 4),
-       ('Food_Second', '350.50', '2020-01-30', 4),
-       ('Food_Third', '150.00', '2020-01-30', 4),
-       ('Food_First', '50.50', '2020-01-30', 5),
-       ('Food_Second', '450.50', '2020-01-30', 5),
-       ('Food_Third', '150.00', '2020-01-30', 5);
+INSERT INTO RESTAURANTS (NAME_RESTAURANT, FOOD_NAME_ONE, PRICE_ONE, FOOD_NAME_TWO, PRICE_TWO, FOOD_NAME_THREE, PRICE_THREE,DATE_MENU)
+VALUES ('Restaurant_First', 'Food_First', '250.50', 'Food_Second', '350.50', 'Food_Third', '150.00', '2020-01-30'),
+       ('Restaurant_Second', 'Food_First', '200.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2020-01-30' ),
+       ('Restaurant_Third', 'Food_First', '200.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2020-02-02'),
+       ('Restaurant_Fourth', 'Food_First', '200.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2020-01-30'),
+       ('Restaurant_Fifth','Food_First', '400.50', 'Food_Second', '100.50', 'Food_Third', '200.00', '2020-02-02'),
+       ('Restaurant_Second', 'Food_First', '500.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2021-12-27'),
+       ('Restaurant_Third', 'Food_First', '200.50', 'Food_Second', '600.50', 'Food_Third', '100.00', '2021-12-28'),
+       ('Restaurant_Fourth', 'Food_First', '200.50', 'Food_Second', '200.50', 'Food_Third', '100.00', '2021-12-29'),
+       ('Restaurant_Fifth','Food_First', '100.50', 'Food_Second', '100.50', 'Food_Third', '200.00', '2021-12-28');
 
 INSERT INTO VOTING (USER_ID, RESTAURANTS_ID)
 VALUES (1, 1),
