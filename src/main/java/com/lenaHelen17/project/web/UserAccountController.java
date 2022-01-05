@@ -1,19 +1,26 @@
 package com.lenaHelen17.project.web;
 
+import com.lenaHelen17.project.AuthUser;
 import com.lenaHelen17.project.model.Restaurant;
+import com.lenaHelen17.project.model.User;
 import com.lenaHelen17.project.model.Voting;
 import com.lenaHelen17.project.repository.RestaurantRepository;
+import com.lenaHelen17.project.repository.UserRepository;
 import com.lenaHelen17.project.repository.VotingRepository;
 import com.lenaHelen17.project.util.DateTimeUtil;
 import com.lenaHelen17.project.util.ValidationUtil;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -34,7 +41,8 @@ public class UserAccountController {
 
     @PostMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(value = HttpStatus.CREATED)
-    public void save(@RequestBody Voting voting) {
+    public void save(@Parameter int id, @AuthenticationPrincipal AuthUser authUser ) {
+        Voting voting = new Voting(authUser.getUser(), restaurantRepository.findById(id).get(), new Date());
         log.info("register {}", voting);
         ValidationUtil.checkNew(voting);
         votingRepository.save(voting);

@@ -10,6 +10,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -66,9 +67,9 @@ public class Restaurant extends BaseEntity implements Serializable {
     @Column(name = "date_menu")
     @NotNull
     @DateTimeFormat(pattern = DateTimeUtil.DATE_TIME_PATTERN)
-    private LocalDateTime dateMenu;
+    private LocalDate dateMenu;
 
-    public Restaurant(String nameRestuarant, String foodNameOne, Double priceOne, String foodNamTwo, Double priceTwo, LocalDateTime dateMenu) {
+    public Restaurant(String nameRestuarant, String foodNameOne, Double priceOne, String foodNamTwo, Double priceTwo, LocalDate dateMenu) {
         this.nameRestuarant = nameRestuarant;
         this.foodNameOne = foodNameOne;
         this.priceOne = priceOne;
@@ -77,7 +78,7 @@ public class Restaurant extends BaseEntity implements Serializable {
         this.dateMenu = dateMenu;
     }
 
-    public Restaurant(String nameRestuarant, String foodNameOne, Double priceOne, String foodNamTwo, Double priceTwo, String foodNameThree, Double priceThree, String foodNameFour, LocalDateTime dateMenu) {
+    public Restaurant(String nameRestuarant, String foodNameOne, Double priceOne, String foodNamTwo, Double priceTwo, String foodNameThree, Double priceThree, String foodNameFour, LocalDate dateMenu) {
         this.nameRestuarant = nameRestuarant;
         this.foodNameOne = foodNameOne;
         this.priceOne = priceOne;
@@ -89,7 +90,7 @@ public class Restaurant extends BaseEntity implements Serializable {
         this.dateMenu = dateMenu;
     }
 
-    public Restaurant(String nameRestuarant, String foodNameOne, Double priceOne, String foodNamTwo, Double priceTwo, String foodNameThree, Double priceThree, String foodNameFour, Double priceFour, LocalDateTime dateMenu) {
+    public Restaurant(String nameRestuarant, String foodNameOne, Double priceOne, String foodNamTwo, Double priceTwo, String foodNameThree, Double priceThree, String foodNameFour, Double priceFour, LocalDate dateMenu) {
         this.nameRestuarant = nameRestuarant;
         this.foodNameOne = foodNameOne;
         this.priceOne = priceOne;

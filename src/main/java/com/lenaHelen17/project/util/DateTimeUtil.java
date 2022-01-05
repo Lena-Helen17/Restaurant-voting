@@ -1,5 +1,6 @@
 package com.lenaHelen17.project.util;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -11,10 +12,10 @@ public class DateTimeUtil {
     }
 
 
-    public static LocalDateTime UserVotingTime (LocalDateTime localDateTimeUser) {
+    public static LocalDate UserVotingTime (LocalDateTime localDateTimeUser) {
         if (localDateTimeUser.getHour() > 11) {
-            return localDateTimeUser.plusDays(1);
+            return localDateTimeUser.plusDays(1).toLocalDate();
         }
-        return localDateTimeUser;
+        return localDateTimeUser.toLocalDate();
     }
 }
