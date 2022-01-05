@@ -7,7 +7,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "voting")
@@ -31,5 +31,5 @@ public class Voting extends BaseEntity{
     @Column(name = "date_voting", nullable = false, columnDefinition = "timestamp default now()", updatable = false)
     @NotNull
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private Date registered = new Date();
+    private LocalDate dateVoting = LocalDate.now();
 }
