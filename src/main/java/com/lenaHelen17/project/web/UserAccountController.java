@@ -29,7 +29,7 @@ import java.util.Date;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/account/voting")
+@RequestMapping(value = "/api/user/voting")
 @AllArgsConstructor
 @Slf4j
 @Tag(name = "User Account Controller")
@@ -39,7 +39,7 @@ public class UserAccountController {
 
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Restaurant> getAll() {
+    public List<Restaurant> getAllRestarants() {
         log.info("get {}", "");
         return restaurantRepository.findByDateMenu(DateTimeUtil.UserVotingTime(LocalDateTime.now()));
     }
