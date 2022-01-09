@@ -46,7 +46,7 @@ public class UserAccountController {
 
     @PostMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void saveVoting(@RequestBody int id, @AuthenticationPrincipal AuthUser authUser) {
-        Voting voting = new Voting(authUser.getUser(), restaurantRepository.findById(id).get(), DateTimeUtil.UserVotingTime(LocalDateTime.now()));
+        Voting voting = new Voting(authUser.getUser(), restaurantRepository.findById(id).get(), DateTimeUtil.UserVotingTime(LocalDateTime.now()).format(DateTimeUtil.DATE_FORMATTER));
         log.info("register {}", voting);
         Voting buferVoting = votingRepository.findByUserIdAndDateVoting(voting.getUser().id(), voting.getDateVoting());
         if (buferVoting == null) {

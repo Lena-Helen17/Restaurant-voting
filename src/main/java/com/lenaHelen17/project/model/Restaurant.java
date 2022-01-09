@@ -2,6 +2,7 @@ package com.lenaHelen17.project.model;
 
 import com.lenaHelen17.project.util.DateTimeUtil;
 import lombok.*;
+import org.hibernate.annotations.Proxy;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Column;
@@ -19,6 +20,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@Proxy(lazy = false)
 public class Restaurant extends BaseEntity implements Serializable {
 
     @Column(name = "name_restaurant", nullable = false)
