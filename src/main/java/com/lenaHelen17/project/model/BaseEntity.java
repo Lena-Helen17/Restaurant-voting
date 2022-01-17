@@ -16,6 +16,7 @@ import javax.persistence.*;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString
 public abstract class BaseEntity implements Persistable<Integer> {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
@@ -27,7 +28,9 @@ public abstract class BaseEntity implements Persistable<Integer> {
 
     @JsonIgnore
     @Override
-    public boolean isNew() { return  id == null; }
+    public boolean isNew() {
+        return id == null;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -42,5 +45,12 @@ public abstract class BaseEntity implements Persistable<Integer> {
     }
 
     @Override
-    public int hashCode() { return id == null ? 0 : id;}
+    public int hashCode() {
+        return id == null ? 0 : id;
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + ":" + id;
+    }
 }

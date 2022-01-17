@@ -7,9 +7,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+
 @Transactional(readOnly = true)
 public interface VotingRepository extends JpaRepository<Voting, Integer> {
 
+    @ApiExplorerSettings(IgnoreApi = true)
     @RestResource(rel = "by-userIdAndDateVoting", path = "by-userIdAndDateVoting")
     Voting findByUserIdAndDateVoting(int userId, String dateVoting);
 
