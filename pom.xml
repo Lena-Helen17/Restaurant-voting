@@ -8,7 +8,7 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.github.lena-Helen17.boot</groupId>
+    <groupId>com.github.lenaHelen17.boot</groupId>
     <artifactId>restaurant-voting</artifactId>
     <version>1.0</version>
     <name>Restaurant-voting</name>

@@ -8,22 +8,29 @@ VALUES ('user@gmail.com', 'User_First', 'User_Last', '{noop}password'),
 
 INSERT INTO USER_ROLE (ROLE, USER_ID)
 VALUES ('USER', 1),
-       ('ADMIN', 2),
-       ('USER', 3),
-       ('USER', 4),
-       ('USER', 5),
-       ('USER', 6);
+       ('ADMIN', 2);
 
-INSERT INTO RESTAURANTS (NAME_RESTAURANT, FOOD_NAME_ONE, PRICE_ONE, FOOD_NAME_TWO, PRICE_TWO, FOOD_NAME_THREE, PRICE_THREE,DATE_MENU)
-VALUES ('Restaurant_First', 'Food_First', '250.50', 'Food_Second', '350.50', 'Food_Third', '150.00', '2022-01-05'),
-       ('Restaurant_Second', 'Food_First', '200.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2022-01-09' ),
-       ('Restaurant_Third', 'Food_First', '200.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2022-01-09'),
-       ('Restaurant_Fourth', 'Food_First', '200.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2022-01-05'),
-       ('Restaurant_Fifth','Food_First', '400.50', 'Food_Second', '100.50', 'Food_Third', '200.00', '2022-01-09'),
-       ('Restaurant_Second', 'Food_First', '500.50', 'Food_Second', '300.50', 'Food_Third', '100.00', '2022-01-07'),
-       ('Restaurant_Third', 'Food_First', '200.50', 'Food_Second', '600.50', 'Food_Third', '100.00', '2022-01-07'),
-       ('Restaurant_Fourth', 'Food_First', '200.50', 'Food_Second', '200.50', 'Food_Third', '100.00', '2022-01-07'),
-       ('Restaurant_Fifth','Food_First', '100.50', 'Food_Second', '100.50', 'Food_Third', '200.00', '2022-01-05');
+INSERT INTO RESTAURANTS (NAME, ADDRESS)
+VALUES ('Restaurant_First', 'Food_First'),
+       ('Restaurant_Second', 'Food_First'),
+       ('Restaurant_Third', 'Food_First'),
+       ('Restaurant_Fourth', 'Food_First'),
+       ('Restaurant_Fifth','Food_First'),
+       ('Restaurant_Second', 'Food_First'),
+       ('Restaurant_Third', 'Food_First'),
+       ('Restaurant_Fourth', 'Food_First'),
+       ('Restaurant_Fifth','Food_First');
+
+INSERT INTO MEAL ( DATE_TIME, NAME, PRICE, RESTAURANT_ID)
+VALUES ('2020-01-30 10:00:00', 'Первое', 500.20, 1),
+       ('2020-01-30 13:00:00', 'Второе', 1000.0, 1),
+       ('2020-01-30 20:00:00', 'Чай', 50, 1),
+       ('2020-01-31 0:00:00', 'Еда на граничное значение', 100, 3),
+       ('2020-01-31 10:00:00', 'Завтрак', 500, 3),
+       ('2020-01-31 13:00:00', 'Обед', 1000, 3),
+       ('2020-01-31 20:00:00', 'Ужин', 510, 1),
+       ('2020-01-31 14:00:00', 'Админ ланч', 510, 2),
+       ('2020-01-31 21:00:00', 'Админ ужин', 1500, 2);
 
 INSERT INTO VOTING (USER_ID, RESTAURANTS_ID, DATE_VOTING)
 VALUES (1, 1, '2022-01-09'),
