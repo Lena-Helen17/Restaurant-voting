@@ -10,7 +10,7 @@ INSERT INTO USER_ROLE (ROLE, USER_ID)
 VALUES ('USER', 1),
        ('ADMIN', 2);
 
-INSERT INTO RESTAURANTS (NAME, ADDRESS)
+INSERT INTO RESTAURANT (NAME, ADDRESS)
 VALUES ('Restaurant_First', 'Food_First'),
        ('Restaurant_Second', 'Food_First'),
        ('Restaurant_Third', 'Food_First'),
@@ -32,7 +32,7 @@ VALUES ('2020-01-30 10:00:00', 'Первое', 500.20, 1),
        ('2020-01-31 14:00:00', 'Админ ланч', 510, 2),
        ('2020-01-31 21:00:00', 'Админ ужин', 1500, 2);
 
-INSERT INTO VOTING (USER_ID, RESTAURANTS_ID, DATE_VOTING)
+INSERT INTO VOTING (USER_ID, RESTAURANT_ID, DATE_VOTING)
 VALUES (1, 1, '2022-01-09'),
        (3, 5, '2022-01-09'),
        (4, 5, '2022-01-09'),

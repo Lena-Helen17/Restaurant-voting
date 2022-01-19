@@ -1,8 +1,6 @@
 package com.github.lenaHelen17.boot.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.github.lenaHelen17.boot.util.JsonDeserializers;
 import org.springframework.util.StringUtils;
 import lombok.*;
 
@@ -39,7 +37,7 @@ public class User extends BaseEntity implements Serializable {
     @Column(name = "password")
     @Size(max = 256)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @JsonDeserialize(using = JsonDeserializers.PasswordDeserializer.class)
+   // @JsonDeserialize(using = JsonDeserializers.PasswordDeserializer.class)
     private String password;
 
     @Enumerated(EnumType.STRING)

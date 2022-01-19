@@ -17,7 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Proxy(lazy = false)
-public class Restaurant extends NamedEntity implements Serializable {
+public class Restaurant extends NamedEntity{
 
     @Column(name = "address", nullable = false)
     @Size(max = 128)
