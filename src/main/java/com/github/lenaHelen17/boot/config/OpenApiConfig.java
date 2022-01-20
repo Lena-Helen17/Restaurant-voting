@@ -23,8 +23,8 @@ import org.springframework.context.annotation.Configuration;
                 description = """
                         Spring Boot приложение 
                         <p><b>Тестовые креденшелы:</b><br>
-                        - user@yandex.ru / password<br>
-                        - admin@gmail.com / admin</p>
+                        - user@gmail.com/ password<br>
+                        - admin@mail.ru/ admin</p>
                         """
         ),
         security = @SecurityRequirement(name = "basicAuth")

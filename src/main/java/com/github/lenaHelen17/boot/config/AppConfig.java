@@ -12,9 +12,9 @@ import java.sql.SQLException;
 @Configuration
 @Slf4j
 @EnableCaching
-@Profile("!test")
 public class AppConfig {
 
+    @Profile("!test")
     @Bean(initMethod = "start", destroyMethod = "stop")
     public Server h2Server() throws SQLException {
         log.info("Start H2 TCP server");

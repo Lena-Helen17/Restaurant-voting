@@ -20,16 +20,15 @@ spring:
     password:
   h2.console.enabled: true
 
+ # Jackson Serialization Issue Resolver
+  jackson.visibility:
+    field: any
+    getter: none
+    setter: none
+    is-getter: none
+
 logging:
   level:
     root: WARN
     ru.javaops.bootjava: DEBUG
-#    org.springframework.security.web.FilterChainProxy: DEBUG
-
-    # Jackson Serialization Issue Resolver
-#    jackson:
-#      visibility.field: any
-#      visibility.getter: none
-#      visibility.setter: none
-#      visibility.is-getter: none
-
+    org.springframework.security.web.FilterChainProxy: DEBUG

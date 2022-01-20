@@ -11,26 +11,26 @@ VALUES ('USER', 1),
        ('ADMIN', 2);
 
 INSERT INTO RESTAURANT (NAME, ADDRESS)
-VALUES ('Restaurant_First', 'Food_First'),
-       ('Restaurant_Second', 'Food_First'),
-       ('Restaurant_Third', 'Food_First'),
-       ('Restaurant_Fourth', 'Food_First'),
-       ('Restaurant_Fifth','Food_First'),
-       ('Restaurant_Second', 'Food_First'),
-       ('Restaurant_Third', 'Food_First'),
-       ('Restaurant_Fourth', 'Food_First'),
-       ('Restaurant_Fifth','Food_First');
+VALUES ('Restaurant_First', 'Адрес_First'),
+       ('Restaurant_Second', 'Адрес_2'),
+       ('Restaurant_Third', 'Адрес_3'),
+       ('Restaurant_Fourth', 'Адрес_4'),
+       ('Restaurant_Fifth','Адрес_5'),
+       ('Restaurant_Second', 'Адрес_6'),
+       ('Restaurant_Third', 'Адрес_7'),
+       ('Restaurant_Fourth', 'Адрес_8'),
+       ('Restaurant_Fifth','Адрес_10');
 
 INSERT INTO MEAL ( DATE_TIME, NAME, PRICE, RESTAURANT_ID)
 VALUES ('2020-01-30 10:00:00', 'Первое', 500.20, 1),
        ('2020-01-30 13:00:00', 'Второе', 1000.0, 1),
-       ('2020-01-30 20:00:00', 'Чай', 50, 1),
-       ('2020-01-31 0:00:00', 'Еда на граничное значение', 100, 3),
-       ('2020-01-31 10:00:00', 'Завтрак', 500, 3),
-       ('2020-01-31 13:00:00', 'Обед', 1000, 3),
-       ('2020-01-31 20:00:00', 'Ужин', 510, 1),
-       ('2020-01-31 14:00:00', 'Админ ланч', 510, 2),
-       ('2020-01-31 21:00:00', 'Админ ужин', 1500, 2);
+       ('2020-01-30 20:00:00', 'Чай', 510.2, 1),
+       ('2020-01-31 0:00:00', 'Борщ', 100, 3),
+       ('2020-01-31 10:00:00', 'Лазанья', 500, 3),
+       ('2020-01-31 13:00:00', 'Жаркое', 120, 3),
+       ('2020-01-31 20:00:00', 'Карбанара', 510, 1),
+       ('2020-01-31 14:00:00', 'Пицца', 210, 2),
+       ('2020-01-31 21:00:00', 'Компот', 159.99, 2);
 
 INSERT INTO VOTING (USER_ID, RESTAURANT_ID, DATE_VOTING)
 VALUES (1, 1, '2022-01-09'),
