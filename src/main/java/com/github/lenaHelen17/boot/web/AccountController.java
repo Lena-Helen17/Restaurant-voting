@@ -24,7 +24,6 @@ import java.util.Set;
 @RequestMapping(value = "/api/account")
 @AllArgsConstructor
 @Slf4j
-@Tag(name = "Account Controller")
 public class AccountController {
 
     private final UserRepository userRepository;
