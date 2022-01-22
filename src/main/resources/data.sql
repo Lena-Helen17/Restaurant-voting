@@ -15,8 +15,8 @@ VALUES ('USER', 1),
        ('USER', 6);
 
 INSERT INTO RESTAURANT (NAME, ADDRESS)
-VALUES ('Restaurant_First', 'Адрес_First'),
-       ('Restaurant_Second', 'Адрес_2'),
+VALUES ('Restaurant_First', 'Adress_First'),
+       ('Restaurant_Second', 'Adress_2'),
        ('Restaurant_Third', 'Адрес_3'),
        ('Restaurant_Fourth', 'Адрес_4'),
        ('Restaurant_Fifth','Адрес_5'),
@@ -37,8 +37,8 @@ VALUES ('2022-01-09', 'Первое', 500.20, 1),
        ('2022-01-09', 'Компот', 159.99, 2);
 
 INSERT INTO VOTING (USER_ID, RESTAURANT_ID, DATE_VOTING)
-VALUES (1, 1, '2022-01-09'),
-       (3, 5, '2022-01-09'),
+VALUES (1, 3, '2022-01-21'),
+       (3, 5, '2022-01-22'),
        (4, 5, '2022-01-09'),
-       (6, 2, '2022-01-09'),
-       (2, 5, '2022-01-09');
+       (6, 2, '2022-01-22'),
+       (2, 5, '2022-01-22');
