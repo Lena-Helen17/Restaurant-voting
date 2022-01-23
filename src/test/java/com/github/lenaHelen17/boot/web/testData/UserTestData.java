@@ -22,14 +22,14 @@ public class UserTestData {
                         throw new UnsupportedOperationException();
                     });
 
-    public static final String USER_ID = "1";
-    public static final String ADMIN_ID = "2";
+    public static final Integer USER_ID = 1;
+    public static final Integer ADMIN_ID = 2;
     public static final int NOT_FOUND = 100;
     public static final String USER_MAIL = "user@gmail.com";
     public static final String ADMIN_MAIL = "admin@mail.ru";
 
-    public static final User userTest = new User(USER_ID,  USER_MAIL, "User", "password", Collections.singleton(Role.USER));
-    public static final User adminTest = new User(ADMIN_ID, "Admin", ADMIN_MAIL, "admin", Collections.singleton(Role.ADMIN));
+    public static final User userTest = new User(USER_ID,  USER_MAIL, "User_First", "User_Last", "password", Collections.singleton(Role.USER));
+    public static final User adminTest = new User(ADMIN_ID, ADMIN_MAIL,"Admin_First","Admin_Last",  "admin", Collections.singleton(Role.ADMIN));
 
 
     public static User getNew() {
@@ -37,7 +37,7 @@ public class UserTestData {
     }
 
     public static User getUpdated() {
-        return new User(USER_ID, "UpdatedName", USER_MAIL, "newPass",  Set.of(Role.ADMIN));
+        return new User(USER_ID, USER_MAIL, "UpdatedName", "Update","newPass",  Set.of(Role.ADMIN));
     }
 
     public static String jsonWithPassword(User user, String passw) {

@@ -41,9 +41,4 @@ public class Voting extends BaseEntity{
         this.user = user;
         this.restaurant = restaurant;
     }
-    public Voting(User user, Restaurant restaurant) {
-        this.user = user;
-        this.restaurant = restaurant;
-    }
-
 }

@@ -11,6 +11,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.Collections;
 import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;
@@ -20,7 +21,6 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
 @ToString(callSuper = true, exclude = {"password"})
 public class User extends BaseEntity implements Serializable {
 
@@ -50,6 +50,22 @@ public class User extends BaseEntity implements Serializable {
     @Column(name = "role")
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<Role> roles;
+
+    public User(Integer id, String email, String firstName, String lastName, String password, Set<Role> role) {
+        super(id);
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.roles = role;
+    }
+    public User(String email,  String firstName, String lastName, String password, Set<Role> role) {
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.roles = role;
+    }
 
     public void setEmail(String email) {
         this.email = StringUtils.hasText(email) ? email.toLowerCase() : null;

@@ -1,7 +1,6 @@
 package com.github.lenaHelen17.boot.util;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class DateTimeUtil {
@@ -9,15 +8,13 @@ public class DateTimeUtil {
     private static final String DATE_PATTERN  = "yyyy-MM-dd";
     public static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern(DATE_TIME_PATTERN);
     public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern(DATE_PATTERN);
-
-    private DateTimeUtil() {
-    }
+    public static final LocalTime TIME_STOP_VOTTING = LocalTime.of(11,00,00);
 
 
-    public static LocalDate UserVotingTime (LocalDateTime localDateTimeUser) {
-        if (localDateTimeUser.getHour() > 10) {
-            return localDateTimeUser.plusDays(1).toLocalDate();
+    public static Boolean UserVotingTime(LocalTime localTime) {
+        if (localTime.isBefore(TIME_STOP_VOTTING)) {
+            return true;
         }
-        return localDateTimeUser.toLocalDate();
+        return false;
     }
 }

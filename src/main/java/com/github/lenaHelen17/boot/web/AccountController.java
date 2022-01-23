@@ -34,6 +34,12 @@ public class AccountController {
         return authUser.getUser();
     }
 
+    @GetMapping("/by-email")
+    public ResponseEntity<User> getByEmail(@RequestParam String email) {
+        log.info("getByEmail {}", email);
+        return ResponseEntity.of(userRepository.findByEmailIgnoreCase(email));
+    }
+
     @DeleteMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@AuthenticationPrincipal AuthUser authUser) {
